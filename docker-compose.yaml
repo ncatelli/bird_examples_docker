@@ -2,6 +2,7 @@ version: '3'
 services:
   peer1:
     build: .
+    hostname: peer1
     privileged: true
     volumes:
       - ./conf/peer1/etc/bird:/etc/bird
@@ -12,6 +13,7 @@ services:
         ipv4_address: 10.0.100.10
   peer2:
     build: .
+    hostname: peer2
     privileged: true
     volumes:
       - ./conf/peer2/etc/bird:/etc/bird
@@ -20,6 +22,7 @@ services:
         ipv4_address: 10.0.0.11
   peer3:
     build: .
+    hostname: peer3
     privileged: true
     volumes:
       - ./conf/peer3/etc/bird:/etc/bird
