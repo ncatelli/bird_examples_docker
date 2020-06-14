@@ -6,7 +6,7 @@ ENV BIRD_RUN_DIR=/run/bird
 ENV BIRD_ARGS=""
 
 RUN apt-get update && apt-get install -y \
-    bird && \
+    bird procps && \
     rm -rf /var/lib/apt/lists/*
 
 COPY scripts/start.sh /start.sh
